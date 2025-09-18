@@ -125,42 +125,63 @@ body {
 /* About section styles */
 .about {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 100%;
     background: #fcfaed;
     border-radius: 20px;
     margin: 4.8rem 0;
-    min-height: 350px;
+    gap: 2rem;
 }
 
 .about .about-text {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 4rem 2rem;
+    width: 50%;
+    color: #222;
+    padding: 4rem 3rem;
+    margin-left: 5rem;
+    flex: 1 1 0;
+    min-width: 340px;
 }
 
-.about .about-text h1 {
-    font-size: 3.2rem;
-    color: #000;
-    font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+.about .about-image,
+.hero-photo {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0;
+    min-width: 340px;
 }
 
-.about .about-text p,
-.about .about-text .lead-para {
-    font-size: 1.2rem;
-    color: #363D73;
-    font-weight: 500;
-    margin-bottom: 1.2rem;
-    line-height: 1.7;
+.about .about-image img,
+.hero-photo img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    background: #fff;
 }
 
-.about .about-image {
-    display: none;
+/* Responsive: stack vertically on small screens */
+@media screen and (max-width: 900px) {
+    .about {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .about .about-text,
+    .about .about-image,
+    .hero-photo {
+        width: 100%;
+        margin-left: 0;
+        padding: 2rem 1rem;
+        min-width: unset;
+    }
+    .about .about-image img,
+    .hero-photo img {
+        width: 260px;
+        height: 260px;
+    }
 }
 
 /* Portfolio section styles */
