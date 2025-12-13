@@ -522,23 +522,3 @@ body {
         font-size: 1rem;
     }
 }
-.icon-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.icon-image {
-    width: 60px;     /* adjust to your image size */
-    height: 60px;
-}
-
-.cv-text {
-    position: absolute;
-    bottom: 5px;      /* 🔥 moves CV upward inside the circle */
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    pointer-events: none;
-}
